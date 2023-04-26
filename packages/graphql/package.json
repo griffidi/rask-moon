@@ -1,0 +1,44 @@
+{
+  "name": "@rask/graphql",
+  "private": true,
+  "version": "0.0.1",
+  "packageManager": "pnpm@8.2.0",
+  "engines": {
+    "node": ">=18.11.0 >=19.2.0",
+    "pnpm": ">=8.2.0"
+  },
+  "type": "module",
+  "exports": {
+    "./client/*": "./src/client/*",
+    "./constants/*": "./src/constants/*",
+    "./controllers/*": "./src/controllers/*",
+    "./decorators/*": "./src/decorators/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/**/*.{map.js,js,d.ts}",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "",
+    "build": ""
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.12",
+    "@lit-labs/context": "^0.3.0",
+    "@lit/reactive-element": "^1.6.1",
+    "@rask/core": "workspace:^",
+    "apollo3-cache-persist": "^0.14.1",
+    "graphql": "^16.6.0",
+    "graphql-http": "^1.18.0",
+    "lit": "^2.7.2",
+    "tslib": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0",
+    "typescript": "5.1.0-beta"
+  },
+  "peerDependencies": {
+    "typescript": "5.*"
+  }
+}

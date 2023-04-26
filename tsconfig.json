@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "references": [
+    { "path": "./api" },
+    { "path": "./apps/demo" },
+    { "path": "./packages/core" },
+    { "path": "./packages/graphql" },
+    { "path": "./packages/identity" },
+    { "path": "./packages/web" }
+  ]
+}

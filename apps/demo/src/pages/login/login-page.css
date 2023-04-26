@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+:host {
+  --_neutral-color: var(--md-ref-palette-neutral-variant-50);
+  --rk-text-field-label-populated-color: var(--_neutral-color);
+  --rk-button-color: var(--md-sys-color-gradient-blue-purple);
+  --rk-button-on-color: #ffffff;
+  --rk-button-padding-inline: 40px;
+  --rk-button-padding-block: 12px;
+  --rk-button-font-size: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+form {
+  /* color: rgb(40, 41, 42); */
+  /* --_form-color: rgb(from var(--md-sys-color-background) r g b / 0.); */
+  --_form-color: var(--md-sys-color-surface-1);
+  --_form-on-color: var(--md-sys-color-on-gradient);
+  --_form-shape: var(--md-sys-shape-large);
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  box-sizing: border-box;
+  color: var(--_form-on-color);
+  background: var(--_form-color);
+  inline-size: 400px;
+  border-radius: var(--_form-shape);
+  padding-inline: 40px;
+  padding-block: 40px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  font-size: var(--md-sys-typescale-headline-large-size);
+  font-weight: var(--md-sys-typescale-headline-medium-weight);
+  margin-inline: 0;
+  margin-block: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-block-start: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  & button {
+    --_button-shape: var(--md-sys-shape-rounded);
+    --_button-on-color: #fff;
+    --_button-color: var(--md-sys-color-gradient-purple-blue);
+
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    appearance: none;
+    border: none;
+    inline-size: 200px;
+    border-radius: var(--_button-shape);
+    color: var(--_button-on-color);
+    background: var(--_button-color);
+    block-size: 42px;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      border-radius: var(--_button-shape);
+      /* border: 2px solid var(--md-sys-color-blue); */
+    }
+
+    &:hover::before {
+      box-shadow: rgba(90, 20, 255, 0.5) 0 0 14px 0;
+    }
+  }
+
+  & a {
+    cursor: pointer;
+    font-weight: 900;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

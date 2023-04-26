@@ -1,0 +1,45 @@
+{
+  "name": "@rask/core",
+  "private": true,
+  "version": "0.0.1",
+  "packageManager": "pnpm@8.2.0",
+  "engines": {
+    "node": ">=18.11.0 >=19.2.0",
+    "pnpm": ">=8.2.0"
+  },
+  "type": "module",
+  "exports": {
+    "./cache/*": "./src/cache/*",
+    "./common/*": "./src/common/*",
+    "./crypto/*": "./src/crypto/*",
+    "./di/*": "./src/di/*",
+    "./events/*": "./src/events/*",
+    "./fonts/*": "./src/fonts/*",
+    "./identity/*": "./src/identity/*",
+    "./reactivity/*": "./src/reactivity/*",
+    "./types/*": "./src/types/*",
+    "./validation/*": "./src/validation/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/**/*.{map.js,js,d.ts}",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "",
+    "build": ""
+  },
+  "dependencies": {
+    "lit": "^2.7.2",
+    "nanoid": "^4.0.2",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0",
+    "typescript": "5.1.0-beta"
+  },
+  "peerDependencies": {
+    "typescript": "5.*"
+  }
+}

@@ -1,0 +1,48 @@
+:host {
+  --rk-menu-container-color: var(--md-sys-color-background);
+  --_menu-item-spacing: var(--rk-menu-item-spacing, 5px);
+  --_menu-offset-top: var(--rk-menu-offset-top, 36px);
+  --md-icon-button-icon-size: var(--rk-menu-icon-size, 24px);
+
+  position: relative;
+  z-index: 200;
+}
+
+:host(::slotted) {
+  & > * {
+    inline-size: 100%;
+  }
+}
+
+:host([opened]) aside {
+  opacity: 1;
+  /* transform: rotateX(0); */
+  visibility: visible;
+}
+
+aside {
+  /* content-visibility: hidden; */
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: var(--_menu-item-spacing);
+  background: var(--rk-menu-container-color);
+  border: 1px solid var(--rk-border-color);
+  border-radius: var(--md-sys-shape-medium);
+  box-shadow: var(--md-sys-color-shadow-2);
+  min-inline-size: 300px;
+  inset-block-start: var(--_menu-offset-top);
+  inset-inline-end: 0;
+  opacity: 0.3;
+  transition: 280ms opacity ease-out;
+  padding-inline: 30px;
+  padding-block: 20px;
+  box-sizing: border-box;
+
+  & a {
+    color: #444;
+    display: block;
+    padding: 0.5em;
+  }
+}

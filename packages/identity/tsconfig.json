@@ -1,0 +1,13 @@
+{
+  "extends": ["../../tsconfig.base.json", "../../tsconfig.lit.json"],
+  "compilerOptions": {
+    "rootDir": ".",
+    "paths": {
+      "@rask/core/*": ["../core/src/*"],
+      "@rask/graphql/*": ["../graphql/src/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist", "node_modules"],
+  "references": [{ "path": "../core" }, { "path": "../graphql" }]
+}

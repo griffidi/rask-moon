@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "../../tsconfig.base.json",
+    "../../tsconfig.lit.json"
+  ],
+  "compilerOptions": {
+    "rootDir": ".",
+    "paths": {
+      "@rask/core/*": ["../core/src/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
+  "references": [{ "path": "../core" }]
+}

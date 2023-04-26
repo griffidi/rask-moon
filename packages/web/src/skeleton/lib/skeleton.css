@@ -1,0 +1,114 @@
+:host {
+  --rk-skeleton-background: var(--md-ref-palette-neutral-variant-30);
+  --rk-skeleton-line-height: normal;
+  --rk-skeleton-margin: 1px;
+  --rk-skeleton-shape: var(--md-sys-shape-small);
+  --md-sys-shape-circle-size: 40px;
+  --md-sys-shape-rectangle-size: 160px;
+
+  pointer-events: none;
+  margin-block: var(--rk-skeleton-margin);
+  box-sizing: border-box;
+  line-height: var(--rk-skeleton-line-height);
+  display: block;
+  overflow: hidden;
+  inline-size: var(--rk-skeleton-width, auto);
+  block-size: calc(var(--rk-skeleton-block-size, 20px) - calc(var(--rk-skeleton-margin) * 2));
+  background-color: var(--rk-skeleton-background);
+  border-radius: var(--rk-skeleton-shape);
+  animation: pulse 1.2s var(--md-sys-motion-standard-easing) infinite;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    opacity: 0.1;
+    inline-size: 300%;
+    block-size: 300%;
+    margin-block-end: 20px;
+    background-color: rgb(55 65 81/1);
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    animation-delay-start: 0s;
+    animation-delay-end: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: pulse;
+    animation-timeline: auto;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+:host([circle]) {
+  --rk-skeleton-inline-size: var(--md-sys-shape-circle-size);
+  --rk-skeleton-block-size: var(--md-sys-shape-circle-size);
+
+  border-radius: 50%;
+}
+
+:host([rectangle]) {
+  --rk-skeleton-inline-size: var(--md-sys-shape-rectangle-size);
+  --rk-skeleton-block-size: var(--md-sys-shape-rectangle-size);
+}
+
+:host([button]) {
+  --rk-skeleton-block-size: 34px;
+  --rk-skeleton-shape: 9999px;
+}
+
+:host([label][small]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-label-small-line-height);
+}
+:host([label][medium]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-label-medium-line-height);
+}
+:host([label][large]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-label-large-line-height);
+}
+
+:host([body][small]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-body-small-line-height);
+}
+:host([body][medium]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-body-medium-line-height);
+}
+:host([body][large]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-body-large-line-height);
+}
+
+:host([headline][small]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-headline-small-line-height);
+}
+:host([headline][medium]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-headline-medium-line-height);
+}
+:host([headline][large]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-headline-large-line-height);
+}
+
+:host([title][small]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-title-small-line-height);
+}
+:host([title][medium]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-title-medium-line-height);
+}
+:host([title][large]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-title-large-line-height);
+}
+
+:host([display][small]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-display-small-line-height);
+}
+:host([display][medium]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-display-medium-line-height);
+}
+:host([display][large]) {
+  --rk-skeleton-block-size: var(--md-sys-typescale-display-large-line-height);
+}

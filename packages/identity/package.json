@@ -1,0 +1,54 @@
+{
+  "name": "@rask/identity",
+  "private": true,
+  "version": "0.0.1",
+  "packageManager": "pnpm@8.2.0",
+  "engines": {
+    "node": ">=18.11.0 >=19.2.0",
+    "pnpm": ">=8.2.0"
+  },
+  "type": "module",
+  "exports": {
+    "./authentication/*": "./src/authentication/*.js",
+    "./constants/*": "./src/constants/*.js",
+    "./guards/*": "./src/guards/*.js",
+    "./services/*": "./src/services/*.js",
+    "./user/*": "./src/user/*.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/**/*.{map.js,js,css,dt.t}",
+    "README.md"
+  ],
+  "scripts": {
+    "codegen": "graphql-codegen --config codegen.yml",
+    "codegen:watch": "pnpm codegen -w",
+    "dev": ""
+  },
+  "dependencies": {
+    "@lit-labs/context": "^0.3.0",
+    "@lit/reactive-element": "^1.6.1",
+    "@rask/core": "workspace:^",
+    "@rask/graphql": "workspace:^",
+    "graphql": "^16.6.0",
+    "lit": "^2.7.2",
+    "tslib": "^2.5.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^3.3.1",
+    "@graphql-codegen/typed-document-node": "^4.0.1",
+    "@graphql-codegen/typescript": "^3.0.4",
+    "@graphql-codegen/typescript-operations": "^3.0.4",
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@types/node": "^18.16.0",
+    "graphql-tag": "^2.12.6",
+    "typescript": "5.1.0-beta"
+  },
+  "peerDependencies": {
+    "@lit-labs/context": "*",
+    "@lit/reactive-element": "*",
+    "@rask/core": "workspace:*",
+    "lit": "*",
+    "typescript": "5.*"
+  }
+}
